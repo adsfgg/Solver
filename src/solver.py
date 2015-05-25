@@ -50,7 +50,7 @@ def solve(eq1, eq2):
     det = matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0]
 
     if det == 0:
-        raise ValueError("No real solutions.")
+        raise ValueError("No solution.")
 
     inverse[0][0] = matrix[1][1] * 1 / det
     inverse[0][1] = -matrix[0][1] * 1 / det
@@ -82,7 +82,9 @@ def main():
             solutions = solve(eq1, eq2)
             print("\nx = " + str(solutions[0][0]) + ", y = " + str(solutions[0][1]) + "\n")
         except ValueError as e:
+            print("\n")
             print(e)
+            print("\n")
         running = input("Solve another? (Y/N): ").lower() == "y"
 
 
