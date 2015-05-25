@@ -52,10 +52,10 @@ def solve(eq1, eq2):
     if det == 0:
         raise ValueError("No solution.")
 
-    inverse[0][0] = matrix[1][1] * 1 / det
-    inverse[0][1] = -matrix[0][1] * 1 / det
-    inverse[1][0] = -matrix[1][0] * 1 / det
-    inverse[1][1] = matrix[0][0] * 1 / det
+    inverse[0][0] = matrix[1][1] / det
+    inverse[0][1] = -matrix[0][1] / det
+    inverse[1][0] = -matrix[1][0] / det
+    inverse[1][1] = matrix[0][0] / det
 
     # solve
     x = (inverse[0][0] * solutions[0][0]) + (inverse[1][0] * solutions[0][1])
