@@ -1,12 +1,8 @@
 from os import system
 
-LOGO_SIZE = 9
-running = False
-
 
 def load_logo(filenm):
-    global LOGO_SIZE
-    logo_array = [""] * LOGO_SIZE
+    logo_array = [""] * 9
 
     try:
         file = open(filenm)
@@ -68,7 +64,7 @@ def solve(eq1, eq2):
 
 
 def main():
-    global running
+    running = False
 
     logo = load_logo("res/logo.txt")
     running = True
